@@ -94,6 +94,8 @@
     });
       
       map.addControl(new mapboxgl.FullscreenControl());
+      
+      map.addControl(new mapboxgl.ScaleControl({position: 'bottom-right'}));
 
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
@@ -173,7 +175,7 @@
     map.on('mouseleave', 'Entries', function () {
         map.getCanvas().style.cursor = '';
     });
- 
+      
 </script>
 </body>
 </html>
