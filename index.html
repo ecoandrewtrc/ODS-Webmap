@@ -95,7 +95,11 @@
       
       map.addControl(new mapboxgl.FullscreenControl());
       
-      map.addControl(new mapboxgl.ScaleControl({position: 'bottom-right'}));
+      var scale = new mapboxgl.ScaleControl({
+      maxWidth: 80,
+      unit: 'imperial'
+      });
+      map.addControl(scale);
 
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
